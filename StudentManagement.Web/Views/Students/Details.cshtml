@@ -1,0 +1,20 @@
+@model StudentManagement.Web.Models.Student
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="text-center">Student Details</h1>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h4 class="card-title">@Model.FirstName @Model.LastName</h4>
+        <p class="card-text"><strong>Email:</strong> @Model.Email</p>
+        <p class="card-text"><strong>Age:</strong> @Model.Age</p>
+    </div>
+</div>
+
+<div class="mt-3 text-center">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

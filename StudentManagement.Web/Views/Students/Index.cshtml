@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "All Students";
+}
+<h2>All Students</h2>
+
+@* <form asp-action="Index" method="get">
+    <input type="text" name="searchString" value="@Context.Request.Query["searchString"]" placeholder="Search by name..." class="form-control" />
+    <input type="submit" value="Search" class="btn btn-primary" />
+</form> *@
+
+<p>Total Students: @ViewBag.StudentCount</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.FirstName @student.LastName</td>
+                <td>@student.Email</td>
+                <td>@student.Age</td>
+                <td> <a asp-action="Edit" asp-route-id="@student.Id" class="btn btn-warning">Edit</a> | <a asp-action="Details" asp-route-id="@student.Id" class="btn btn-info">Details</a> | <a asp-action="Delete" asp-route-id="@student.Id" class="btn btn-danger">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="Adults" class="btn btn-secondary">Show Adult Students</a> |
+    <a asp-action="Create" class="btn btn-success">Add New Student</a>
+</p>

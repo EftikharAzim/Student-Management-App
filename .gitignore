@@ -1,0 +1,40 @@
+# Visual Studio
+.vscode/
+
+# Build folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.userprefs
+
+# Logs
+*.log
+
+# Database
+*.mdf
+*.ldf
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Node.js
+node_modules/
+
+# Environment variables
+.env
+.env.*
+
+# IDEs
+.idea/
+*.iml
+
+# Others
+*.bak
+*.swp
+*.tmp
+*.temp
